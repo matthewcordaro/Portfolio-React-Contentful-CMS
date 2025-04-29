@@ -9,3 +9,11 @@ A headless CMS is a back-end only content management system that provides conten
 ## Contentful
 
 [Contentful ](https://www.contentful.com/)
+
+### Entries collection / Get all entries of a Space
+
+`/spaces/{space_id}/environments/{environment_id}/entries?access_token={access_token}`
+
+### Content type / Query entries
+
+`/spaces/{space_id}/environments/{environment_id}/entries?access_token={access_token}&content_type={content_type}`
