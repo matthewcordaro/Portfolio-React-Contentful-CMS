@@ -66,8 +66,8 @@ html {
 
 body {
   background: var(--backgroundColor);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
@@ -342,6 +342,7 @@ PROJECTS
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   transition: var(--transition);
+  position: relative;
 }
 .project:hover {
   transform: scale(1.05);
@@ -357,7 +358,22 @@ PROJECTS
 .project h5 {
   text-align: center;
   padding: 1rem 0;
+  margin: 0;
   color: var(--grey-700);
+  font-size: 1.5rem;
+}
+
+.source-code-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  color: var(--grey-700);
+  font-size: 1.5rem;
+}
+
+.source-code-link:hover {
+  color: var(--primary-500);
 }
 
 @media (min-width: 768px) {
