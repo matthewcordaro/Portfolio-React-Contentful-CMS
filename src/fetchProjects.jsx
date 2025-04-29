@@ -23,7 +23,7 @@ export const useFetchProjects = () => {
           const { image, siteUrl, sourceCodeUrl, title } = item.fields
           const id = item.sys.id
           const imageUrl = image?.fields?.file?.url
-          return { title, siteUrl, sourceCodeUrl, imageUrl }
+          return { title, id, siteUrl, sourceCodeUrl, imageUrl }
         })
         setProjects(projects)
       } catch (error) {
