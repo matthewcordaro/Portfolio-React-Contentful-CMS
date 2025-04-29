@@ -4,7 +4,6 @@ import { useFetchProjects } from "./fetchProjects"
 
 function Projects() {
   const { loading, projects } = useFetchProjects()
-  console.log(loading, projects)
 
   if (loading)
     return (
@@ -12,6 +11,7 @@ function Projects() {
         <h2>Loading...</h2>
       </section>
     )
+
   return (
     <section className='projects'>
       <div className='title'>
@@ -32,14 +32,16 @@ function Projects() {
                 <img src={imageUrl} alt={title} className='img' />
                 <h5>{title}</h5>
               </a>
-              <a
-                href={sourceCodeUrl}
-                target='_blank'
-                rel='noreferrer'
-                className='source-code-link'
-              >
-                <FaGithub />
-              </a>
+              {sourceCodeUrl && (
+                <a
+                  href={sourceCodeUrl}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='source-code-link'
+                >
+                  <FaGithub />
+                </a>
+              )}
             </div>
           )
         })}
