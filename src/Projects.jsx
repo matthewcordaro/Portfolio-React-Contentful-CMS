@@ -22,19 +22,25 @@ function Projects() {
         {projects.map((project) => {
           const { id, imageUrl, siteUrl, sourceCodeUrl, title } = project
           return (
-            <a
-              key={id}
-              href={siteUrl}
-              target='_blank'
-              rel='noreferrer'
-              className='project'
-            >
-              <img src={imageUrl} alt={title} className='img' />
-              <h5>{title}</h5>
-              <a href={sourceCodeUrl} target='_blank' rel='noreferrer'>
+            <div key={id} className='project'>
+              <a
+                href={siteUrl}
+                target='_blank'
+                rel='noreferrer'
+                className='project-link'
+              >
+                <img src={imageUrl} alt={title} className='img' />
+                <h5>{title}</h5>
+              </a>
+              <a
+                href={sourceCodeUrl}
+                target='_blank'
+                rel='noreferrer'
+                className='source-code-link'
+              >
                 <FaGithub />
               </a>
-            </a>
+            </div>
           )
         })}
       </div>
