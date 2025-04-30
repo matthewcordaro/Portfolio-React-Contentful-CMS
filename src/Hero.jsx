@@ -6,16 +6,11 @@ function Hero() {
     <section className='hero'>
       <div className='hero-center'>
         <div className='hero-title'>
-          <h1>Contentful CMS</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            quod commodi temporibus ab! Corporis atque illum ratione doloremque
-            asperiores ab, vero repellat accusantium libero neque! Iusto
-            voluptatem quos optio aperiam.
-          </p>
+          <h1>My Portfolio</h1>
+          <p>A list of my portfolio sites running on Netlify...</p>
         </div>
-        <div className="img-container">
-          <img src={heroImg} alt="person and the browser" />
+        <div className='img-container'>
+          <img src={heroImg} alt='me coding on my pc' />
         </div>
       </div>
     </section>
